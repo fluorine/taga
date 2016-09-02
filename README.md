@@ -27,6 +27,6 @@ There can only be three types of information in a `.taga` file:
    - Identity, #a and #aa are synonymous tags: `#a #aa`
    - Hierarchical, #n includes #x and #y: `#n: x, y`
    - Compounded, #n and #m tags, when both used, are synonymous to #nm: `#nm: n + m`
- - *Namespaces** divide the file by exclusive categories. Every category includes the content of everything below it
+ - **Namespaces** divide the file by exclusive categories. Every category includes the content of everything below it
    and must have the format of `@category_name`
- - *Content* inckudes all the chunks of text that consume categories.
+ - **Content* *includes all the chunks of text that consume categories.
