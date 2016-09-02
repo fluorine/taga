@@ -31,4 +31,5 @@ There can only be three types of information in a `.taga` file:
    - Compounded, #n and #m tags, when both used, are synonymous to #nm: `#nm: n + m`
  - **Namespaces** divide the file by exclusive categories. Every category includes the content of everything below it
    and must have the format of `@category_name`
- - **Content* *includes all the chunks of text that consume categories.
+ - **Content** includes all the chunks of text that consume categories. They are all separated by a white line.
+ - **Comments** are simply content chunks that do not use tags.
