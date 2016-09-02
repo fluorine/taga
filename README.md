@@ -3,18 +3,20 @@ A simple markup language and tool to visualize and transform raw text informatio
 
 # Sample file
 
- >  #chemistry: element, compound
- >  #biology: tissue, cell, organ
- >  #cell #neuron
- >  #biochemistry: chemistry + biology
- >
- >  @Science
- >
- >  Hidrogen #element
- >  Water #compound
- >  Nitrogen #element
- >  Guanine #compund #cell
-   
+```
+#chemistry: element, compound
+#biology: tissue, cell, organ
+#cell #neuron
+#biochemistry: chemistry + biology
+
+@Science
+
+Hidrogen #element
+Water #compound
+Nitrogen #element
+Guanine #compund #cell
+```
+
 # Commands and Queries
 
 # Sample queries
