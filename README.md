@@ -17,9 +17,11 @@ Nitrogen #element
 Guanine #compund #cell
 ```
 
-# Commands and Queries
+# Commands
+*soon*
 
-# Sample queries
+# Sample Queries
+*soon*
 
 # Specifications
 There can only be three types of information in a `.taga` file:
