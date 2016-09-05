@@ -1,4 +1,4 @@
-# Taga Markup Language
+# Taga
 A simple query tool to visualize and transform raw text information organized by hashtags.
 
 # Example
