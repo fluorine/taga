@@ -10,7 +10,9 @@ Nitrogen #element
 Guanine #compound #biology
 ```
 Using **taga** to display only *compounds* in list:
+
 > `.\taga.rb science.txt`
+
 > `show #compound`
 
 On screen:
@@ -24,6 +26,7 @@ Taga is useful to view and manipulate raw text information without a *real* data
 
 # Implemented Queries
 - **show**: Display only items that contain the specified tag.
+
 >`show #example_tag`
 
 # Features to implement
