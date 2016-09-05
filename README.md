@@ -1,35 +1,33 @@
 # Taga Markup Language
-A simple markup language and tool to visualize and transform raw text information organized by hashtags.
+A simple query tool to visualize and transform raw text information organized by hashtags.
 
-# Sample file
-
+# Example
+File `science.txt` contains a list of items separated by new line and organized by hashtags:
 ```
-#chemistry: element, compound
-#biology: tissue, cell, organ
-#cell #neuron
-#biochemistry: chemistry + biology
-
-@Science
-
 Hidrogen #element
 Water #compound
 Nitrogen #element
-Guanine #compund #cell
+Guanine #compound #biology
+```
+Using **taga** to display only *compounds* in list:
+> `.\taga.rb science.txt`
+> `show #compound`
+
+On screen:
+```
+Hidrogen #compound
+Guanine #compound #biology
 ```
 
-# Commands
-*soon*
+# Why use taga?
+Taga is useful to view and manipulate raw text information without a *real* database.
 
-# Sample Queries
-*soon*
+# Implemented Queries
+- **show**: Display only items that contain the specified tag.
+>`show #example_tag`
+
+# Features to implement
+- **taga** script interpreter
 
 # Specifications
-There can only be three types of information in a `.taga` file:
- - The **tag tree** is metadata that defines relationships among used tags. There are three types of statements to define tags.
-   - Identity, #a and #aa are synonymous tags: `#a #aa`
-   - Hierarchical, #n includes #x and #y: `#n: x, y`
-   - Compounded, #n and #m tags, when both used, are synonymous to #nm: `#nm: n + m`
- - **Namespaces** divide the file by exclusive categories. Every category includes the content of everything below it
-   and must have the format of `@category_name`
- - **Content** includes all the chunks of text that consume categories. They are all separated by a white line.
- - **Comments** are simply content chunks that do not use tags.
+*soon*
