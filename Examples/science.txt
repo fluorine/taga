@@ -1,0 +1,4 @@
+Hidrogen #element
+Water #compound
+Nitrogen #element
+Guanine #compound #biology
