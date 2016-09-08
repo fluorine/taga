@@ -46,9 +46,15 @@ class REPL
     when /((^exit$)|(^quit$))/i
       #Exit application
       exit
+
     when /^show(\s+all)?$/i
       #Display all loaded items
       display_list @objects
+
+    when /^show\s+(if\s*)?\s*\#(?<tag>\S*)$/
+      tag = $~[:tag]
+      display_list @objects.select {|o| o.tags.include? tag}
+
     when /^load\s+((?<path>[^\'\"\s]+)|([\'\"](?<path>.*)[\'\"]))$/i
       #Load a file's items
       @path = $~[:path]
