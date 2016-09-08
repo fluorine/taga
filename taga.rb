@@ -1,4 +1,5 @@
-# REPL commands
+require 'pathname'
+
 class REPL
   def initialize(file_path)
     @path = file_path
@@ -14,6 +15,10 @@ class REPL
       item = Item.new(line)
       @objects.push(item)
     end
+
+    puts "  #{@objects.length} items loaded from: #{@path}"
+  rescue
+    puts "  Error: failed to load file: #{@path}"
   end
 
   def show_repl
@@ -38,10 +43,22 @@ class REPL
     output_text = ""
 
     case statement
-    when /((^exit$)|(^quit$))/i # Exit application
+    when /((^exit$)|(^quit$))/i
+      #Exit application
       exit
     when /^show(\s+all)?$/i
+      #Display all loaded items
       display_list @objects
+    when /^load\s+((?<path>[^\'\"\s]+)|([\'\"](?<path>.*)[\'\"]))$/i
+      #Load a file's items
+      @path = $~[:path]
+
+      # Expand relative path
+      if not /([a-zA-Z]:)?(\\\\[a-zA-Z0-9_.-]+)+\\\\?/.match(@path)
+        @path = File.expand_path(@path, Dir.pwd)
+      end
+
+      load_file
     end
 
     output_text
