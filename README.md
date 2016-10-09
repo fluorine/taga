@@ -30,7 +30,8 @@ Taga is useful to view and manipulate raw text information without a *real* data
 >`show #example_tag`
 
 # Features to implement
-- **taga** script interpreter
+- Ruby gem package
+- Script interpreter
 
 # Specifications
 *soon*
